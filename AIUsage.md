@@ -1,1 +1,149 @@
+We used AI to provide a guide for structuring our layout. It only served as a starting point to help us understand how to use CSS concepts. The code given by AI was modified and adjusted to align with our intended design and structure. We carefully studied each instruction, analyzed how the code worked, and ensured that we understood the purpose of each code.
+
+
+For reference, here is the code given by AI that we used as a guide:
+
+
+/* =========================
+   Base Styles
+========================= */
+
+
+:root {
+  --primary-color: #2a7ae2;
+  --primary-hover: #1f5fb8;
+  --text-dark: #222;
+  --text-light: #555;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: var(--spacing-lg);
+  
+  /* Center cards horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+
+/* =========================
+   Product Card Layout
+========================= */
+
+
+.product-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-lg);
+  
+  display: flex;
+  gap: var(--spacing-lg);
+  
+  max-width: 800px;
+  width: 100%;
+}
+
+
+.product-card img {
+  width: 300px;
+  height: auto;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+
+/* =========================
+   Product Details
+========================= */
+
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.product-details h2 {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+
+.price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+
+.description {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.5;
+}
+
+
+/* =========================
+   Button Styling
+========================= */
+
+
+.buy-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+
+.buy-btn:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .product-card img {
+    width: 100%;
+  }
+
+
+  .product-details {
+    align-items: center;
+  }
+}
+
+
+
+
 
